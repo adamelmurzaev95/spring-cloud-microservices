@@ -3,6 +3,7 @@ package com.javastart.account.service;
 import com.javastart.account.entity.Account;
 import com.javastart.account.exception.AccountNotFoundException;
 import com.javastart.account.repository.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -13,6 +14,7 @@ public class AccountService {
 
     private final AccountRepository accountRepository;
 
+    @Autowired
     public AccountService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
